@@ -43,6 +43,18 @@ body,
   padding: 32px;
 }
 
+.sidebar ul {
+  color: #f0f0f5;
+}
+
+.sidebar ul li + li {
+  margin-top: 16px;
+}
+
+.sidebar ul li a {
+  color: inherit;
+}
+
 .content-area {
   grid-area: content;
   background: #f0f0f5;
