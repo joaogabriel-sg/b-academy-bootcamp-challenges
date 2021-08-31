@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import Header from "./Header";
 import Menu from "./Menu";
 import Sidebar from "./Sidebar";
@@ -144,12 +146,19 @@ const links = [
 ]
 
 export default function App() {
+  const [post, setPost] = useState(links[0]);
+
+  function handleChangePost(id) {
+    const newPost = links.find((link) => link.id === id);
+    setPost(newPost);
+  }
+
   return (
     <div className="container-grid">
       <Header />
       <Menu />
-      <Sidebar links={links} />
-      <ContentArea post={links[0]} />
+      <Sidebar links={links} handleChangePost={handleChangePost} />
+      <ContentArea post={post} />
       <Footer />
     </div>
   )
