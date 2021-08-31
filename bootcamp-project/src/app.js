@@ -149,7 +149,7 @@ export default function App() {
       <Header />
       <Menu />
       <Sidebar links={links} />
-      <ContentArea />
+      <ContentArea post={links[0]} />
       <Footer />
     </div>
   )
