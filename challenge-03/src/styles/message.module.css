@@ -1,0 +1,14 @@
+.messageContainer {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  z-index: 10;
+  transform: translateX(-50%);
+
+  background: #f36;
+  width: 300px;
+  padding: 12px;
+  text-align: center;
+
+  color: #fff;
+}

@@ -1,0 +1,88 @@
+.container {
+  min-height: 100vh;
+  padding: 48px 8px;
+}
+
+.content {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: minmax(250px, 350px) 1fr;
+  gap: 48px;
+}
+
+.table {
+  width: 100%;
+  align-self: start;
+  border-collapse: collapse;
+  border-spacing: none;
+}
+
+.table thead {
+  border-bottom: 1px solid #f36;
+}
+
+.table thead tr th {
+  padding-bottom: 8px;
+}
+
+.table tbody tr + tr {
+  border-top: 1px solid #f36;
+}
+
+.table tbody tr td {
+  padding: 12px;
+  text-align: center;
+}
+
+.table tbody tr td:not(:last-child) {
+  border-right: 1px solid #777;
+}
+
+.table tbody tr td img {
+  width: 200px;
+}
+
+.table tbody tr td div {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border: 1px solid #777;
+  margin-right: 0;
+}
+
+.table tbody tr td button {
+  background: #f36;
+  width: 36px;
+  height: 36px;
+  border: none;
+
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.table tbody tr td button:hover {
+  transform: scale(1.02, 1.02);
+}
+
+@media (max-width: 1020px) {
+  .content {
+    overflow-x: hidden;
+  }
+
+  .table {
+    display: block;
+    overflow: scroll;
+  }
+}
+
+@media (max-width: 800px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
