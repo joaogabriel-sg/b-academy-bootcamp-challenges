@@ -1,4 +1,6 @@
-import { Container, Title, InputGroup, SubmitButton } from './styles';
+import brainnLogoImg from '../../assets/brainn-logo.svg';
+
+import { Container, Logo, Title, InputGroup, SubmitButton } from './styles';
 
 export default function Form({ createNewCar }) {
   function getFormElement(form) {
@@ -32,6 +34,7 @@ export default function Form({ createNewCar }) {
 
   return (
     <Container onSubmit={handleSubmitNewCar}>
+      <Logo src={brainnLogoImg} alt="Logo da Brainn" />
       <Title>Registro de Carros</Title>
 
       <InputGroup>

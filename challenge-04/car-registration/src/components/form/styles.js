@@ -6,6 +6,23 @@ export const Container = styled.form`
   flex-direction: column;
 `;
 
+const fade = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
+export const Logo = styled.img`
+  width: 48px;
+  margin-bottom: 1.6rem;
+
+  opacity: 0;
+  animation: ${fade} 0.8s forwards ease;
+`;
+
 const toRight = keyframes`
   0% {
     opacity: 0;
@@ -103,15 +120,6 @@ export const InputGroup = styled.div`
     &:focus {
       border-color: var(--color-accent);
     }
-  }
-`;
-
-const fade = keyframes`
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 `;
 
