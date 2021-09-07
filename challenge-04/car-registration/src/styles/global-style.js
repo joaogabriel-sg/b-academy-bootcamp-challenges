@@ -15,6 +15,10 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   html,
   body,
   #root {
@@ -22,7 +26,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background: var(---color-secondary);
+    background: var(--color-secondary);
   }
 
   *,

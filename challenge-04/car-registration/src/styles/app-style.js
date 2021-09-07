@@ -2,12 +2,13 @@ import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.main`
   min-height: 100vh;
-  padding: 48px 8px;
+  padding: 0px 8px;
 `;
 
 export const Grid = styled.div`
   width: 100%;
   max-width: 1280px;
+  min-height: 100vh;
   margin: 0 auto;
 
   display: grid;
@@ -30,24 +31,33 @@ const show = keyframes`
 
 export const Table = styled.table`
   width: 100%;
+  margin: 48px 0;
   align-self: start;
   border-collapse: collapse;
   border-spacing: none;
+  border: 1px solid var(--color-accent);
+
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 
   opacity: 0;
-  animation: ${show} 1s forwards ease;
-  animation-delay: 1.4s;
+  animation: ${show} 1s 2.4s forwards ease;
 
   > thead {
+    background: var(--color-accent);
     border-bottom: 1px solid var(--color-accent);
 
     > tr th {
-      padding-bottom: 8px;
+      padding: 8px 0;
+      color: var(--color-secondary);
+
+      @media (max-width: 800px) {
+        width: 100%;
+      }
     }
   }
 
   @media (max-width: 1020px) {
     display: block;
-    overflow: scroll;
+    overflow: auto;
   }
 `;
