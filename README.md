@@ -4,13 +4,13 @@
 </div>
 
 This repository stores the codes of B.Academy's ReactJS Bootcamp challenges, with two projects developed so far:
+
 1. Website as a blog
 2. Car registration system
 
 <p align="center">
   <img width="60%" src="./images/project-01.png" />
-  <img width="60%" src="./images/project-02-1.png" />
-  <img width="60%" src="./images/project-02-2.png" />
+  <img width="60%" src="./images/project-02.png" />
 </p>
 
 # 🎮 Getting started
@@ -143,4 +143,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 # ✨ Show your support
 
 Give a ⭐ if this project helped you or if you liked it!
-
