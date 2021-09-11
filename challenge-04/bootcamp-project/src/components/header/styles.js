@@ -19,10 +19,6 @@ export const Container = styled.header`
   align-items: center;
   justify-content: center;
 
-  > img {
-    margin-bottom: 8px;
-  }
-
   > h1 {
     text-align: center;
 
@@ -42,4 +38,8 @@ export const Container = styled.header`
       animation: ${animate} 1s ease;
     }
   }
+`;
+
+export const Logo = styled.img`
+  margin-bottom: 8px;
 `;

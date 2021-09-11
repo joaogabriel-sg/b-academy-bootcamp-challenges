@@ -50,14 +50,14 @@ export const Item = styled.li`
   &:hover::after {
     width: 100%;
   }
+`;
 
-  > a {
-    display: block;
-    padding: 0 8px;
+export const Link = styled.a`
+  display: block;
+  padding: 0 8px;
 
-    font-size: 16px;
-    font-weight: 600;
-    text-decoration: none;
-    color: var(--color-accent);
-  }
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-accent);
 `;

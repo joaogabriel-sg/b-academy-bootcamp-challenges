@@ -13,6 +13,7 @@ export const Content = styled.div`
 
 export const List = styled.ul`
   list-style-type: none;
+  margin-bottom: 24px;
 `;
 
 const show = keyframes`
@@ -27,12 +28,30 @@ const show = keyframes`
 `;
 
 export const Item = styled.li`
-  display: flex;
-  align-items: center;
-
   opacity: 0;
   animation: ${show} 1s forwards ease;
   animation-delay: ${({ delayTime }) => `${delayTime * 0.2}s`};
+
+  & + & {
+    margin-top: 16px;
+  }
+`;
+
+export const PostLink = styled.a`
+  display: flex;
+  align-items: center;
+
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  color: var(--color-primary);
+
+  transition: color 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--color-accent);
+  }
 
   &::before {
     content: '';
@@ -43,26 +62,6 @@ export const Item = styled.li`
     height: 2px;
     margin-right: 8px;
   }
-
-  & + & {
-    margin-top: 16px;
-  }
-
-  > button {
-    background: none;
-    border: none;
-
-    font-size: 14px;
-    font-weight: 600;
-    text-align: left;
-    color: var(--color-primary);
-
-    transition: color 0.2s ease;
-
-    &:hover {
-      color: var(--color-accent);
-    }
-  }
 `;
 
 export const Buttons = styled.div`
@@ -70,7 +69,7 @@ export const Buttons = styled.div`
   animation: ${show} 1s forwards ease;
   animation-delay: 0.5s;
 
-  > button {
-    margin-top: 16px;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 `;

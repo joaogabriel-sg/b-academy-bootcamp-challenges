@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react';
 
 import Message from './components/message';
 import Form from './components/form';
-import CarRows from './components/car-rows';
+import Table from './components/table';
 
 import { httpGet, httpPost, httpDelete } from './utils/http';
 
 import GlobalStyle from './styles/global-style';
-import { Container, Grid, Table } from './styles/app-style';
+import { Container, Grid } from './styles/app-style';
 
 const url = 'http://localhost:3333/cars';
 
@@ -19,24 +19,9 @@ export default function App() {
     getCars();
   }, []);
 
-  useEffect(() => {
-    const subscribe = setTimeout(() => {
-      setMessage('');
-    }, 3000);
-
-    return () => clearTimeout(subscribe);
-  }, [message]);
-
   async function getCars() {
     const data = await httpGet(url);
     setCars(data);
-  }
-
-  async function deleteCar(plate) {
-    const result = await httpDelete(url, { plate });
-
-    getCars();
-    setMessage(result.message);
   }
 
   async function createNewCar(car) {
@@ -51,28 +36,21 @@ export default function App() {
     return true;
   }
 
+  async function deleteCar(plate) {
+    const result = await httpDelete(url, { plate });
+
+    getCars();
+    setMessage(result.message);
+  }
+
   return (
     <>
       <GlobalStyle />
       <Container>
         <Grid>
-          <Message message={message} />
+          <Message message={message} changeMessage={setMessage} />
           <Form createNewCar={createNewCar} />
-          <Table>
-            <thead>
-              <tr>
-                <th>Imagem</th>
-                <th>Marca / Modelo</th>
-                <th>Ano</th>
-                <th>Placa</th>
-                <th>Cor</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <CarRows cars={cars} deleteCar={deleteCar} />
-            </tbody>
-          </Table>
+          <Table cars={cars} deleteCar={deleteCar} />
         </Grid>
       </Container>
     </>

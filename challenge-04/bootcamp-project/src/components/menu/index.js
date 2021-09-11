@@ -1,4 +1,4 @@
-import { Container, List, Item } from './styles';
+import { Container, List, Item, Link } from './styles';
 
 const itens = [
   {
@@ -21,9 +21,9 @@ export default function Menu() {
       <List>
         {itens.map((item, index) => (
           <Item key={item.name} delayTime={index}>
-            <a href={item.link} target="_blank" rel="noreferrer">
+            <Link href={item.link} target="_blank" rel="noreferrer">
               {item.name}
-            </a>
+            </Link>
           </Item>
         ))}
       </List>
