@@ -30,7 +30,6 @@ export const Head = styled.thead`
 
 export const Row = styled.tr`
   @media (max-width: 1020px) {
-    display: block;
     overflow: auto;
   }
 `;
