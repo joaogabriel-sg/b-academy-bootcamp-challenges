@@ -6,3 +6,4 @@
 - [Refatoração 01](https://github.com/joaogabriel-sg/markee-app/pull/4)
 - [Desafio 08](https://github.com/joaogabriel-sg/markee-app/pull/5)
 - [Desafio 09](https://github.com/joaogabriel-sg/markee-app/pull/6)
+- [Desafio 10](https://github.com/joaogabriel-sg/markee-app/pull/7)
