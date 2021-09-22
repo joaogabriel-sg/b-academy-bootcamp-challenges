@@ -7,4 +7,5 @@
 - [Desafio 08](https://github.com/joaogabriel-sg/markee-app/pull/5)
 - [Desafio 09](https://github.com/joaogabriel-sg/markee-app/pull/6)
 - [Desafio 10](https://github.com/joaogabriel-sg/markee-app/pull/7)
+- [Refatoração 02](https://github.com/joaogabriel-sg/markee-app/pull/8)
 - [Deploy](https://markee-app-joaogabrielsg.netlify.app/)
